@@ -1,0 +1,886 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lu_Lash&Nails | Estudio de Uñas</title>
+
+    <style>
+
+        :root {
+            --fondo: #FFF5F7;
+            --fondo-suave: #FCECEF;
+            --blanco: #FFFFFF;
+            --rosa-claro: #F8DDE4;
+            --rosa: #D89AAA;
+            --rosa-oscuro: #B97889;
+            --texto: #3F3437;
+            --gris: #796F72;
+            --whatsapp: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+   body {
+    background-color: #FFF5F7;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 245, 247, 0.30),
+            rgba(255, 245, 247, 0.30)
+        ),
+        url("img/fondo-unas.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: var(--texto);
+    line-height: 1.6;
+    padding-bottom: 80px;
+}
+@media (max-width: 600px) {
+
+    body {
+        background-size: 100% auto;
+        background-position: center top;
+        background-attachment: scroll;
+    }
+
+}
+
+        /* =========================
+           ENCABEZADO
+        ========================= */
+
+        header {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    text-align: center;
+    padding: 45px 20px;
+
+    border-bottom: 1px solid rgba(216, 154, 170, 0.35);
+}
+
+        .logo-container {
+            width: 155px;
+            height: 155px;
+            margin: 0 auto 18px;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #FBE6EB;
+            box-shadow: 0 8px 25px rgba(185, 120, 137, 0.18);
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: var(--texto);
+            margin-bottom: 6px;
+        }
+
+        header p {
+            color: var(--rosa-oscuro);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* =========================
+           CONTENEDOR
+        ========================= */
+
+        .container {
+            max-width: 900px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+.seccion {
+    background: rgba(255, 255, 255, 0.78);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+        0 8px 30px rgba(185, 120, 137, 0.12);
+}   
+        h2 {
+            color: var(--rosa-oscuro);
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--rosa-claro);
+        }
+
+        /* =========================
+           SERVICIOS
+        ========================= */
+
+        .servicio {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 18px 0;
+            border-bottom: 1px dashed var(--rosa-claro);
+        }
+
+        .servicio:last-child {
+            border-bottom: none;
+        }
+
+        .servicio-info h3 {
+            font-size: 1.05rem;
+            color: var(--texto);
+            margin-bottom: 3px;
+        }
+
+        .servicio-info p {
+            color: var(--gris);
+            font-size: 0.85rem;
+        }
+
+        .precio {
+            color: var(--rosa-oscuro);
+            font-weight: bold;
+            font-size: 1.1rem;
+            white-space: nowrap;
+        }
+
+        /* =========================
+           GALERÍA
+        ========================= */
+
+        .categoria {
+            margin-bottom: 38px;
+        }
+
+        .categoria:last-child {
+            margin-bottom: 0;
+        }
+
+        .categoria h3 {
+            color: var(--texto);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+     .foto {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    border-radius: 15px;
+    cursor: pointer;
+
+    border: 3px solid rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 5px 18px rgba(150, 90, 105, 0.15);
+
+    transition: all 0.3s ease;
+}
+        .foto:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(185, 120, 137, 0.20);
+        }
+
+        /* =========================
+           FORMAS DE PAGO
+        ========================= */
+
+        .pagos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .pago {
+            background: var(--fondo-suave);
+            border: 1px solid var(--rosa-claro);
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            color: var(--texto);
+        }
+
+        /* =========================
+           POLÍTICAS
+        ========================= */
+
+        .politicas ul {
+            padding-left: 20px;
+        }
+
+        .politicas li {
+            margin-bottom: 10px;
+            color: var(--gris);
+            font-size: 0.9rem;
+        }
+
+        /* =========================
+           BOTÓN RESERVA
+        ========================= */
+
+        .btn-reserva {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            background: linear-gradient(
+                135deg,
+                var(--rosa),
+                var(--rosa-oscuro)
+            );
+            color: white;
+            padding: 16px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(185, 120, 137, 0.20);
+        }
+
+        .btn-reserva:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(185, 120, 137, 0.30);
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .btn-whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 60px;
+            height: 60px;
+            background: var(--whatsapp);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 28px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* =========================
+           MODAL DE IMAGEN
+        ========================= */
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(45, 30, 35, 0.88);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 15px;
+            object-fit: contain;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .cerrar {
+            position: absolute;
+            top: 18px;
+            right: 28px;
+            color: white;
+            font-size: 42px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: rgba(255, 255, 255, 0.9);
+            border-top: 1px solid var(--rosa-claro);
+            text-align: center;
+            padding: 30px 20px;
+            color: #9A858A;
+            font-size: 0.8rem;
+        }
+
+        /* =========================
+           CELULAR
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 35px 15px;
+            }
+
+            header h1 {
+                font-size: 1.9rem;
+            }
+
+            .logo-container {
+                width: 130px;
+                height: 130px;
+            }
+
+            .seccion {
+                padding: 20px;
+            }
+
+            .galeria {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .servicio {
+                align-items: flex-start;
+            }
+
+            .precio {
+                font-size: 0.95rem;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================= -->
+
+    <header>
+
+        <div class="logo-container">
+
+            <img
+                src="img/logo.jpeg"
+                alt="Logo Lu_Lash&Nails"
+            >
+
+        </div>
+
+        <h1>Lu_Lash&Nails</h1>
+
+        <p>
+            Uñas profesionales
+        </p>
+
+    </header>
+
+
+
+    <main class="container">
+
+
+        <!-- =========================
+             SERVICIOS
+        ========================= -->
+
+        <section class="seccion">
+
+            <h2>✨ Nuestros Servicios</h2>
+
+
+            <div class="servicio">
+
+                <div class="servicio-info">
+
+                    <h3>Esmaltado Semipermanente</h3>
+
+                    <p>
+                        Color impecable y brillo duradero
+                        sobre tu uña natural.
+                    </p>
+
+                </div>
+
+                <div class="precio">
+                    $ ----
+                </div>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <div class="servicio-info">
+
+                    <h3>Kapping Gel</h3>
+
+                    <p>
+                        Protección y fortalecimiento
+                        de la uña natural.
+                    </p>
+
+                </div>
+
+                <div class="precio">
+                    $ ----
+                </div>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <div class="servicio-info">
+
+                    <h3>Softgel</h3>
+
+                    <p>
+                        Extensiones ligeras,
+                        cómodas y elegantes.
+                    </p>
+
+                </div>
+
+                <div class="precio">
+                    $ ----
+                </div>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <div class="servicio-info">
+
+                    <h3>Polygel</h3>
+
+                    <p>
+                        Resistencia, flexibilidad
+                        y acabado profesional.
+                    </p>
+
+                </div>
+
+                <div class="precio">
+                    $ ----
+                </div>
+
+            </div>
+
+
+            <div class="servicio">
+
+                <div class="servicio-info">
+
+                    <h3>Uñas Esculpidas</h3>
+
+                    <p>
+                        Extensiones realizadas
+                        artesanalmente.
+                    </p>
+
+                </div>
+
+                <div class="precio">
+                    $ ----
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             GALERÍA
+        ========================= -->
+
+        <section class="seccion">
+
+            <h2>📸 Galería de Trabajos</h2>
+
+
+            <!-- SEMIPERMANENTE -->
+
+            <div class="categoria">
+
+                <h3>💅 Esmaltado Semipermanente</h3>
+
+                <div class="galeria">
+
+                    
+                    <img
+                        class="foto"
+                        src="img/semipermanente.jpeg"
+                        alt="Esmaltado Semipermanente"
+                        onclick="abrirImagen(this.src)"
+                    >
+
+
+                    <img
+                        class="foto"
+                        src="img/semipermanente 1.jpeg"
+                        alt="Esmaltado Semipermanente"
+                        onclick="abrirImagen(this.src)"
+                    >
+
+                    <img
+                        class="foto"
+                        src="img/semipermanente2.jpeg"
+                        alt="Esmaltado Semipermanente"
+                        onclick="abrirImagen(this.src)"
+                    >
+
+                    <img
+                        class="foto"
+                        src="img/semipermanente3.jpeg"
+                        alt="Esmaltado Semipermanente"
+                        onclick="abrirImagen(this.src)"
+                    >
+
+                     <img
+                        class="foto"
+                        src="img/semipermanente4.jpeg"
+                        alt="Esmaltado Semipermanente"
+                        onclick="abrirImagen(this.src)"
+                    >
+
+                     <img
+                        class="foto"
+                        src="img/semipermanente5.jpeg"
+                        alt="Esmaltado Semipermanente"
+                        onclick="abrirImagen(this.src)"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- KAPPING -->
+
+            <div class="categoria">
+
+                <h3>✨ Kapping Gel</h3>
+
+                <div class="galeria">
+
+                    <img
+                        class="foto"
+                        src="img/kaping.jpeg"
+                        alt="Kapping Gel"
+                        onclick="abrirImagen(this.src)"
+                    >
+
+                    <img
+                        class="foto"
+                        src="img/kaping1.jpeg"
+                        alt="Kapping Gel"
+                        onclick="abrirImagen(this.src)"
+                    >
+  
+                </div>
+
+            </div>
+
+
+
+            <!-- SOFTGEL -->
+
+            <div class="categoria">
+
+                <h3>💗 Softgel</h3>
+
+                <div class="galeria">
+
+                    <img
+                        class="foto"
+                        src="img/softgel.jpeg"
+                        alt="Softgel"
+                        onclick="abrirImagen(this.src)"
+                    >
+
+                    <img
+                        class="foto"
+                        src="img/softgel1.jpeg"
+                        alt="Softgel"
+                        onclick="abrirImagen(this.src)"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- ESCULPIDAS EN POLYGEL -->
+
+            <div class="categoria">
+
+                <h3>🌸 Uñas Esculpidas</h3>
+
+                <div class="galeria">
+
+                    <img
+                        class="foto"
+                        src="img/esculpidas en polygel.jpeg"
+                        alt="Uñas Esculpidas"
+                        onclick="abrirImagen(this.src)"
+                    >
+
+                    <img
+                        class="foto"
+                        src="img/esculpidas en polygel1.jpeg"
+                        alt="Uñas Esculpidas"
+                        onclick="abrirImagen(this.src)"
+                    >
+
+                    <img
+                        class="foto"
+                        src="img/esculpidas en polygel2.jpeg"
+                        alt="Uñas Esculpidas"
+                        onclick="abrirImagen(this.src)"
+                    >
+
+                    
+                    <img
+                        class="foto"
+                        src="img/esculpidas en polygel3.jpeg"
+                        alt="Uñas Esculpidas"
+                        onclick="abrirImagen(this.src)"
+                    >
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             FORMAS DE PAGO
+        ========================= -->
+
+        <section class="seccion">
+
+            <h2>💳 Formas de Pago</h2>
+
+            <div class="pagos">
+
+                <div class="pago">
+                    💵 Efectivo
+                </div>
+
+                <div class="pago">
+                    📱 Transferencia
+                </div>
+
+                <div class="pago">
+                    💳 Mercado Pago
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             POLÍTICAS
+        ========================= -->
+
+        <section class="seccion politicas">
+
+            <h2>📌 Políticas del Estudio</h2>
+
+            <ul>
+
+                <li>
+                    Se solicita puntualidad para cada turno.
+                </li>
+
+                <li>
+                    En caso de cancelación, avisar con anticipación.
+                </li>
+
+                <li>
+                    Los turnos están sujetos a disponibilidad.
+                </li>
+
+                <li>
+                    Se recomienda asistir con las uñas limpias.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTACTO
+        ========================= -->
+
+        <section class="seccion">
+
+            <h2>📲 Reservá tu turno</h2>
+
+            <p>
+                Consultá disponibilidad y elegí
+                el servicio que más te guste.
+            </p>
+
+            <!-- REEMPLAZAR XXXXXXXXXXXX POR EL WHATSAPP -->
+
+            <a
+                class="btn-reserva"
+                href="https://wa.me/549XXXXXXXXXX"
+                target="_blank"
+            >
+                💬 Contactar por WhatsApp
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         BOTÓN WHATSAPP
+    ========================= -->
+
+    <a
+        class="btn-whatsapp"
+        href="https://wa.me/549XXXXXXXXXX"
+        target="_blank"
+        aria-label="WhatsApp"
+    >
+        💬
+    </a>
+
+
+
+    <!-- =========================
+         MODAL DE FOTOS
+    ========================= -->
+
+    <div
+        class="modal"
+        id="modal"
+        onclick="cerrarImagen()"
+    >
+
+        <span class="cerrar">
+            &times;
+        </span>
+
+        <img
+            id="imagenGrande"
+            src=""
+            alt="Trabajo ampliado"
+        >
+
+    </div>
+
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Lu_Lash&Nails
+        </p>
+
+        <p>
+            Uñas profesionales
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        function abrirImagen(imagen) {
+
+            document.getElementById("modal").style.display = "flex";
+
+            document.getElementById("imagenGrande").src = imagen;
+
+        }
+
+
+        function cerrarImagen() {
+
+            document.getElementById("modal").style.display = "none";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
